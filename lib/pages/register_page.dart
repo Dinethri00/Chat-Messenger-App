@@ -1,18 +1,20 @@
-import 'package:chat_messenger_app/components/myButton.dart';
-import 'package:chat_messenger_app/components/my_text_field.dart';
 import 'package:flutter/material.dart';
 
-class LoginPage extends StatefulWidget {
+import '../components/myButton.dart';
+import '../components/my_text_field.dart';
 
-  const LoginPage({Key? key}) : super(key: key);
+class RegisterPage extends StatefulWidget {
+  const RegisterPage({Key? key}) : super(key: key);
 
   @override
-  State<LoginPage> createState() => _LoginPageState();
+  State<RegisterPage> createState() => _RegisterPageState();
 }
 
-class _LoginPageState extends State<LoginPage> {
+class _RegisterPageState extends State<RegisterPage> {
   final emailController = TextEditingController();
   final passwordController = TextEditingController();
+  final confirmpasswordController = TextEditingController();
+
 
 
   @override
@@ -34,10 +36,10 @@ class _LoginPageState extends State<LoginPage> {
 
                   //text
                   const Text(
-                    'Welcome Back!!!',
+                    "Create Account ",
                     style: TextStyle(
-                      fontSize: 25,
-                      fontWeight: FontWeight.bold
+                        fontSize: 25,
+                        fontWeight: FontWeight.bold
                     ),
 
                   ),
@@ -56,22 +58,31 @@ class _LoginPageState extends State<LoginPage> {
                       hintText: 'Password',
                       obscureText: true
                   ),
+
                   const SizedBox(height: 25,),
 
-                  MyButton(onTap: () {}, text: 'Sign In'),
-                  
-                  SizedBox(height: 20,),
-                  
+                  MyTextField(
+                      controller: confirmpasswordController,
+                      hintText: 'Confirm Password',
+                      obscureText: true
+                  ),
+
+                  const SizedBox(height: 25,),
+
+                  MyButton(onTap: () {}, text: 'Sign Up'),
+
+                  const SizedBox(height: 20,),
+
                   Row(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
-                      Text('Not a member?'),
-                      SizedBox(width: 5,),
-                      Text('Register Now',
-                      style: TextStyle(
-                        color: Colors.blue[900],
-                        fontWeight: FontWeight.bold
-                      ),)
+                      const Text('Already member?'),
+                      const SizedBox(width: 5,),
+                      Text('Login Now',
+                        style: TextStyle(
+                            color: Colors.blue[900],
+                            fontWeight: FontWeight.bold
+                        ),)
                     ],
                   )
                 ],
