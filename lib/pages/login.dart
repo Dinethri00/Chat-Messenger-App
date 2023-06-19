@@ -3,8 +3,9 @@ import 'package:chat_messenger_app/components/my_text_field.dart';
 import 'package:flutter/material.dart';
 
 class LoginPage extends StatefulWidget {
+  final void Function()? onTap;
 
-  const LoginPage({Key? key}) : super(key: key);
+  const LoginPage({super.key, required this.onTap});
 
   @override
   State<LoginPage> createState() => _LoginPageState();
@@ -14,7 +15,7 @@ class _LoginPageState extends State<LoginPage> {
   final emailController = TextEditingController();
   final passwordController = TextEditingController();
 
-  void signUp () {}
+  void signIn () {}
 
 
   @override
@@ -60,15 +61,15 @@ class _LoginPageState extends State<LoginPage> {
                   ),
                   const SizedBox(height: 25,),
 
-                  MyButton(onTap: signUp, text: 'Sign In'),
+                  MyButton(onTap: signIn, text: 'Sign In'),
                   
-                  SizedBox(height: 20,),
+                  const SizedBox(height: 20,),
                   
                   Row(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
-                      Text('Not a member?'),
-                      SizedBox(width: 5,),
+                      const Text('Not a member?'),
+                      const SizedBox(width: 5,),
                       Text('Register Now',
                       style: TextStyle(
                         color: Colors.blue[900],

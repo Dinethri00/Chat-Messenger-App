@@ -15,7 +15,7 @@ class _RegisterPageState extends State<RegisterPage> {
   final passwordController = TextEditingController();
   final confirmpasswordController = TextEditingController();
 
-
+  void signUp () {}
 
   @override
   Widget build(BuildContext context) {
@@ -36,7 +36,7 @@ class _RegisterPageState extends State<RegisterPage> {
 
                   //text
                   const Text(
-                    "Create Account ",
+                    "Register Now ",
                     style: TextStyle(
                         fontSize: 25,
                         fontWeight: FontWeight.bold
