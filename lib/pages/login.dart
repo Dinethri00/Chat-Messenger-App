@@ -14,6 +14,8 @@ class _LoginPageState extends State<LoginPage> {
   final emailController = TextEditingController();
   final passwordController = TextEditingController();
 
+  void signUp () {}
+
 
   @override
   Widget build(BuildContext context) {
@@ -58,7 +60,7 @@ class _LoginPageState extends State<LoginPage> {
                   ),
                   const SizedBox(height: 25,),
 
-                  MyButton(onTap: () {}, text: 'Sign In'),
+                  MyButton(onTap: signUp, text: 'Sign In'),
                   
                   SizedBox(height: 20,),
                   
