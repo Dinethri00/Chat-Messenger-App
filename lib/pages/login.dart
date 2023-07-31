@@ -70,11 +70,14 @@ class _LoginPageState extends State<LoginPage> {
                     children: [
                       const Text('Not a member?'),
                       const SizedBox(width: 5,),
-                      Text('Register Now',
-                      style: TextStyle(
-                        color: Colors.blue[900],
-                        fontWeight: FontWeight.bold
-                      ),)
+                      GestureDetector(
+                        onTap: widget.onTap,
+                        child: Text('Register Now',
+                        style: TextStyle(
+                          color: Colors.blue[900],
+                          fontWeight: FontWeight.bold
+                        ),),
+                      )
                     ],
                   )
                 ],

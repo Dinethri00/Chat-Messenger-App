@@ -69,7 +69,7 @@ class _RegisterPageState extends State<RegisterPage> {
 
                   const SizedBox(height: 25,),
 
-                  MyButton(onTap: () {}, text: 'Sign Up'),
+                  MyButton(onTap: signUp, text: 'Sign Up'),
 
                   const SizedBox(height: 20,),
 
